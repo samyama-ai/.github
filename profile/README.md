@@ -2,8 +2,9 @@
 
 We build [**Samyama Graph**](https://github.com/samyama-ai/samyama-graph) — an open-source
 graph-vector database in Rust that queried **1 billion edges for $2.50** (74M nodes, single
-machine). OpenCypher, RESP, vector search, 14 graph algorithms. Alongside it we run a daily
-**DBMS systems-research program** — small, reproducible, pre-registered papers on the
+machine). OpenCypher, RESP, vector search, 14 graph algorithms
+([read the paper, arXiv:2603.08036](https://arxiv.org/abs/2603.08036)). Alongside it we run a
+daily **DBMS systems-research program** — small, reproducible, pre-registered papers on the
 database problems we hit while building it.
 
 ### What we proved
@@ -18,22 +19,27 @@ pathways, and DrugBank into one graph. Then asked:
 
 [96 of 100 benchmark queries pass →](https://samyama-ai.github.io/samyama-graph-book/biomedical_benchmark.html)
 
-### Research
+### Papers
 
-Reproducible, pre-registered systems papers — honest baselines, not SOTA claims. Each repo
-ships code, data, and the preprint.
+Nine arXiv preprints — reproducible, pre-registered, code + data with each. Honest baselines,
+not SOTA claims.
 
-| Paper | Question | Preprint |
+| Paper | arXiv | Code |
 |---|---|---|
-| [**group-commit-policy**](https://github.com/samyama-ai/group-commit-policy) | When is group-commit tuning worth it? A parameter-free policy is optimal above a device load threshold. | [arXiv:2606.18187](https://arxiv.org/abs/2606.18187) |
-| [**lsm-bloom-allocation**](https://github.com/samyama-ai/lsm-bloom-allocation) | When is adaptive LSM Bloom-filter tuning worth it? Log-law + two-clock adaptivity frontier. | [arXiv:2606.18138](https://arxiv.org/abs/2606.18138) |
-| [**biomedqa**](https://github.com/samyama-ai/biomedqa) | MCP tools vs text-to-Cypher vs standalone LLM over federated biomedical KGs. | [arXiv:2603.15080](https://arxiv.org/abs/2603.15080) |
-| [**clinical-llm-graphrag**](https://github.com/samyama-ai/clinical-llm-graphrag) | When does KG grounding help an LLM? Public-KG null; out-of-training decisive. | repo |
-| [**bandwidth-bound-scan**](https://github.com/samyama-ai/bandwidth-bound-scan) | A predictive bandwidth-fraction law for columnar scans (x86/AVX2 + Apple M4/NEON). | repo |
-| [**cloud-egress-cache**](https://github.com/samyama-ai/cloud-egress-cache) | Billing-faithful egress caching: exact dollar-optimum + crossover rule. | repo |
-| [**filtered-ann-regret**](https://github.com/samyama-ai/filtered-ann-regret) | Filtered-ANN strategy selection as a phase transition; finite-size scaling on SIFT1M. | repo |
-| [**ce-metric-eval**](https://github.com/samyama-ai/ce-metric-eval) | When does q-error actually predict query-plan regret? | repo |
-| [**dbms_research**](https://github.com/samyama-ai/dbms_research) | 1000+ open DBMS problems — formal statements, bounds, 6,700+ link-checked references. | catalog |
+| Samyama: A Unified Graph-Vector Database with In-Database Optimization, Agentic Enrichment, and Hardware Acceleration | [2603.08036](https://arxiv.org/abs/2603.08036) | [samyama-graph](https://github.com/samyama-ai/samyama-graph) |
+| Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access | [2603.15080](https://arxiv.org/abs/2603.15080) | [biomedqa](https://github.com/samyama-ai/biomedqa) |
+| Graph-Grounded Optimization: Rao-Family Metaheuristics, Classical OR, and SLM-Driven Formulation over KGs | [2605.12204](https://arxiv.org/abs/2605.12204) | [optimization_algorithms](https://github.com/samyama-ai/optimization_algorithms) |
+| Knowledge Graphs as the Missing Data Layer for LLM-Based Industrial Asset Operations | [2605.26874](https://arxiv.org/abs/2605.26874) | [assetops-kg](https://github.com/samyama-ai/assetops-kg) |
+| When Does q-error Predict Plan Regret? Three Regimes of Cardinality-Estimation Error | [2606.15600](https://arxiv.org/abs/2606.15600) | [ce-metric-eval](https://github.com/samyama-ai/ce-metric-eval) |
+| Filtered ANN as a Phase Transition: When Selectivity-Estimation Error Causes Plan Regret | [2606.16341](https://arxiv.org/abs/2606.16341) | [filtered-ann-regret](https://github.com/samyama-ai/filtered-ann-regret) |
+| The Value of Adaptivity in LSM Bloom-Filter Tuning: A Log-Law and a Two-Clock Frontier | [2606.18138](https://arxiv.org/abs/2606.18138) | [lsm-bloom-allocation](https://github.com/samyama-ai/lsm-bloom-allocation) |
+| Group Commit Self-Clocks: Why Tuning Is Unnecessary Above a Device-Set Load Threshold | [2606.18187](https://arxiv.org/abs/2606.18187) | [group-commit-policy](https://github.com/samyama-ai/group-commit-policy) |
+| Caching for Dollars, Not Hits: An Exact Offline Reference for Cloud-Egress Caching | [2606.20539](https://arxiv.org/abs/2606.20539) | [cloud-egress-cache](https://github.com/samyama-ai/cloud-egress-cache) |
+
+Also: [**dbms_research**](https://github.com/samyama-ai/dbms_research) — a catalog of 1000+ open
+DBMS problems with formal statements, bounds, and 6,700+ link-checked references. Preprints in
+progress: [clinical-llm-graphrag](https://github.com/samyama-ai/clinical-llm-graphrag),
+[bandwidth-bound-scan](https://github.com/samyama-ai/bandwidth-bound-scan).
 
 ### Engine & tooling
 
