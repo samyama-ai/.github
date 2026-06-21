@@ -59,7 +59,7 @@ progress: [clinical-llm-graphrag](https://github.com/samyama-ai/clinical-llm-gra
 | [**pathways-kg**](https://github.com/samyama-ai/pathways-kg) | Reactome biological pathways | 119K nodes, 835K edges |
 | [**surveillance-kg**](https://github.com/samyama-ai/surveillance-kg) | WHO disease surveillance (GHO) | Public health |
 | [**cricket-kg**](https://github.com/samyama-ai/cricket-kg) | Cricket matches (Cricsheet) | 36K nodes, 1.4M edges |
-| [**assetops-kg**](https://github.com/samyama-ai/assetops-kg) | Industrial operations (IBM AssetOpsBench) | 12.6K nodes |
+| [**assetops-kg**](https://github.com/samyama-ai/assetops-kg) | Industrial operations (IBM AssetOpsBench) | 12.6K nodes, 12.6K edges |
 
 ### Quick start
 
