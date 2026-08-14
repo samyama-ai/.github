@@ -58,8 +58,24 @@ progress: [clinical-llm-graphrag](https://github.com/samyama-ai/clinical-llm-gra
 | [**druginteractions-kg**](https://github.com/samyama-ai/druginteractions-kg) | DrugBank + ChEMBL + SIDER | 245K nodes, 388K edges |
 | [**pathways-kg**](https://github.com/samyama-ai/pathways-kg) | Reactome biological pathways | 119K nodes, 835K edges |
 | [**surveillance-kg**](https://github.com/samyama-ai/surveillance-kg) | WHO disease surveillance (GHO) | Public health |
+| [**edge-ai-kg**](https://github.com/samyama-ai/edge-ai-kg) | Edge-AI deployment: boards, accelerators, ONNX kernels, quantized models | 25K nodes, 76K edges |
+| [**imdb-kg**](https://github.com/samyama-ai/imdb-kg) | Movies, series, people (IMDB non-commercial) | 1.94M nodes, 2.63M edges |
 | [**cricket-kg**](https://github.com/samyama-ai/cricket-kg) | Cricket matches (Cricsheet) | 36K nodes, 1.4M edges |
+| [**football-kg**](https://github.com/samyama-ai/football-kg) | Tournaments, teams, players, goals (DataHub) | 16K nodes, 12K edges |
 | [**assetops-kg**](https://github.com/samyama-ai/assetops-kg) | Industrial operations (IBM AssetOpsBench) | 12.6K nodes, 12.6K edges |
+| [**bank-model-risk-kg**](https://github.com/samyama-ai/bank-model-risk-kg) | Model governance, lineage, regulation (synthetic) | Model risk |
+
+Most ship a prebuilt `.sgsnap` snapshot on the
+[samyama-graph releases page](https://github.com/samyama-ai/samyama-graph/releases) — import one
+and start querying in under a second, no ETL.
+
+**Newest — [edge-ai-kg](https://github.com/samyama-ai/edge-ai-kg)**: the question it answers is
+*"which operators in my model have no kernel on this accelerator, and silently fall back to the
+CPU?"* Built on three real public sources — the [ONNX](https://github.com/onnx/onnx) operator
+catalog, [ONNX Runtime](https://github.com/microsoft/onnxruntime) kernel registrations across
+CPU/CUDA/DirectML, and 73 measured [MLPerf Tiny v1.2](https://github.com/mlcommons/tiny_results_v1.2)
+submissions — plus a generated hardware fleet for scale. Every node is stamped `real` or
+`synthetic`, so the two are never conflated.
 
 ### Quick start
 
